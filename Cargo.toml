@@ -2,6 +2,7 @@
 name = "bwd"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
 keywords = ["compilers"]
 categories = ["compilers"]
 description = "Backwards linked-lists"
