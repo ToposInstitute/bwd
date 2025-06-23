@@ -82,6 +82,10 @@ impl<T> Bwd<T> {
     pub fn rev_iter<'a>(&'a self) -> BwdIter<'a, T> {
         BwdIter { bwd: self }
     }
+
+    pub fn extend_by<I: Iterator<Item = T>>(&self, iter: I) -> Self {
+        iter.fold(self.clone(), |l, x| l.snoc(x))
+    }
 }
 
 impl<T: Clone> Bwd<T> {
